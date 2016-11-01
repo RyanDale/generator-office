@@ -108,46 +108,6 @@ describe('office:app', function(){
 
     });
 
-  }); // describe('runs content subgenerator')
-
-  describe('runs content subgenerator', function(){
-
-    beforeEach(function(done){
-      // setup generator prompts
-      var options = {
-        name: 'My First Addin',
-        rootPath: '',
-        type: 'content',
-        tech: 'html',
-        clients: ['Document', 'Workbook'],
-        'skip-install': true
-      };
-
-      // run the generator
-      helpers.run(path.join(__dirname, '../generators/app'))
-        .withPrompts(options)
-        .on('end', done);
-    });
-
-    it('manifest-*.xml is for content addin', function(done){
-
-      // verify manifest-*.xml exists
-      assert.file(manifestFileName);
-
-      // load manifest-*.xml as JSON
-      var parser = new Xml2Js.Parser();
-      fs.readFile(manifestFileName, 'utf8', function(err, manifestContent){
-        parser.parseString(manifestContent, function(err, manifestJson){
-
-          // check addin type
-          expect(manifestJson.OfficeApp.$['xsi:type']).to.equal('ContentApp');
-
-          done();
-        });
-      });
-
-    });
-
-  }); // describe('runs content subgenerator')
+  }); // describe('runs taskpane subgenerator')
 
 }); // describe('office:app')

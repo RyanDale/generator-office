@@ -117,11 +117,6 @@ module.exports = generators.Base.extend({
             {
               name: 'Task Pane Add-in',
               value: 'taskpane'
-            },
-
-            {
-              name: 'Content Add-in',
-              value: 'content'
             }]
         }];
 
@@ -251,22 +246,6 @@ module.exports = generators.Base.extend({
           }
         }, {
             local: require.resolve('../taskpane')
-          });
-        break;
-      // Content Office Add-in
-      case 'content':
-        // execute subgenerator
-        this.composeWith('office:content', {
-          options: {
-            name: this.genConfig.name,
-            'root-path': this.genConfig['root-path'],
-            tech: this.genConfig.tech,
-            appId: this.genConfig.appId,
-            clients: this.genConfig.clients,
-            'skip-install': this.options['skip-install']
-          }
-        }, {
-            local: require.resolve('../content')
           });
         break;
     }

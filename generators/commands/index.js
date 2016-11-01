@@ -19,7 +19,7 @@ module.exports = generators.Base.extend({
     this.option('type', {
       type: String,
       required: false,
-      desc: 'Add-in type (mail, taskpane, content)'
+      desc: 'Add-in type (mail, taskpane)'
     });
 
     this.option('manifest-only', {
@@ -56,7 +56,7 @@ module.exports = generators.Base.extend({
       required: false
     });
 
-    // Task-pane/Content pane-specific options
+    // Task-pane specific options
     this.option('clients', {
       type: String,
       desc: 'Office client product that can host the add-in (NYI)',
@@ -88,11 +88,6 @@ module.exports = generators.Base.extend({
             {
               name: 'Task Pane Add-in',
               value: 'taskpane'
-            },
-
-            {
-              name: 'Content Add-in',
-              value: 'content'
             }
           ],
           when: this.options.type === undefined
@@ -146,8 +141,6 @@ module.exports = generators.Base.extend({
           this.genConfig = extend(this.genConfig, { hosts: [ 'MailHost' ] });
           return;
         case 'taskpane':
-          // TODO: Setup prompt for available hosts
-        case 'content':
           // TODO: Setup prompt for available hosts
           this.genConfig.hosts = [];
           break;
@@ -213,8 +206,6 @@ module.exports = generators.Base.extend({
           ];
           break;
         case 'taskpane':
-          // TODO: set available extension points
-        case 'content':
           // TODO: set available extension points
           this.genConfig.extensionPoint = [];
           break;
@@ -371,8 +362,7 @@ module.exports = generators.Base.extend({
   configuring: function(){
     // Check for types not yet implemented
     // and inform the user
-    if (this.genConfig.type === 'content' ||
-        this.genConfig.type === 'taskpane') {
+    if (this.genConfig.type === 'taskpane') {
       this.log('Command support for this type of add-is is not yet implemented. Exiting...');
       this.genConfig.abort = true;
       return;
@@ -616,7 +606,6 @@ function getOverrideNamespace(config) {
 
     // TODO: Add other types here
     //case 'taskpane':
-    //case 'content':
     //  return 'NYI';
   }
 

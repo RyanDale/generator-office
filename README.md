@@ -18,7 +18,6 @@ Like other Yeoman generators, this simply creates the scaffolding of files for y
 
 - Office Mail Add-ins (both read & compose forms)
 - Office Task Pane Add-ins
-- Office Content Add-ins
 
 Choose to create the Office projects using plain HTML, CSS & JavaScript (*mirroring the same projects that Visual Studio creates*) or create Angular-based projects.
 
@@ -71,7 +70,6 @@ Running the main generator will prompt you for the type of Office project to cre
 
   - `office:mail` - creates a Mail Add-in
   - `office:taskpane` - creates a Task Pane Add-in
-  - `office:content` - creates a Content Add-in
   - `office:commands` - adds [add-in commands](https://msdn.microsoft.com/EN-US/library/office/mt267546.aspx) to an existing manifest (Currently only supports Outlook add-ins)
 
 > Remember you can see the options of each sub generators by running `$ yo office:[sub] --help`
@@ -142,7 +140,7 @@ Technology to use for the project. The supported options include HTML (`html`), 
 
 The Microsoft Office client application that can host the add-in. 
 
-> This applies only to task pane or content add-ins.
+> This applies only to task pane add-ins.
 
   - Type: String[]
   - Default: undefined / null
