@@ -135,10 +135,10 @@ describe('office:taskpane', function(){
             express: '^4.12.2'
           },
           devDependencies: {
-            chalk: '^1.1.1',
+            chalk: '^1.1.3',
             del: '^2.1.0',
-            gulp: '^3.9.0',
-            'gulp-load-plugins': '^1.0.0',
+            gulp: '^3.9.1',
+            'gulp-load-plugins': '^1.3.0',
             'gulp-clean-css': '^2.0.13',
             'gulp-task-listing': '^1.0.1',
             'gulp-uglify': '^1.5.1',
