@@ -55,9 +55,9 @@ describe('office:taskpane', function(){
           name: 'somes-bad-character',
           version: '0.1.0',
           devDependencies: {
-            chalk: '^1.1.1',
+            chalk: '^1.1.3',
             del: '^2.1.0',
-            gulp: '^3.9.0',
+            gulp: '^3.9.1',
             'gulp-load-plugins': '^1.0.0',
             'gulp-clean-css': '^2.0.13',
             'gulp-replace': '^0.5.4',
@@ -169,9 +169,9 @@ describe('office:taskpane', function(){
             postinstall: 'bower install'
           },
           devDependencies: {
-            chalk: '^1.1.1',
+            chalk: '^1.1.3',
             del: '^2.1.0',
-            gulp: '^3.9.0',
+            gulp: '^3.9.1',
             'gulp-load-plugins': '^1.0.0',
             'gulp-clean-css': '^2.0.13',
             'gulp-replace': '^0.5.4',

@@ -274,11 +274,11 @@ module.exports = generators.Base.extend({
           }
           /* istanbul ignore else */
           if (!packageJson.devDependencies['chalk']) {
-            packageJson.devDependencies['chalk'] = '^1.1.1';
+            packageJson.devDependencies['chalk'] = '^1.1.3';
           }
           /* istanbul ignore else */
           if (!packageJson.devDependencies['gulp']) {
-            packageJson.devDependencies['gulp'] = '^3.9.0';
+            packageJson.devDependencies['gulp'] = '^3.9.1';
           }
           /* istanbul ignore else */
           if (!packageJson.devDependencies['gulp-webserver']) {
